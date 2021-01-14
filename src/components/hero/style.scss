@@ -1,0 +1,107 @@
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: #1b1c22;
+}
+
+.heroNav {
+    width: 100%;
+    min-height: 80px;
+    padding: 20px 0;
+    background-color: #212229;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .wrapper {
+            display: flex;
+            align-items: center;
+        }
+        #burgerMenu {
+            color: #f9a5ff;
+            cursor: pointer;
+            display: none;
+        }
+    }
+    @media (max-width: 860px) {
+        .container {
+            #burgerMenu {
+                display: block;
+            }
+        }
+    }
+    @media (max-width: 1365px) {
+        .container {
+            max-width: 90%;
+        }
+    }
+}
+
+.heroNavlink {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 22px;
+    margin-right: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    @media (max-width: 860px) {
+        font-size: 40px;
+    }
+}
+
+.heroNavSearch {
+    height: 40px;
+    min-height: 40px;
+    input {
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        border: 1px solid #2c2f39;
+        background: #353535;
+        padding: 10px 24px;
+        width: 260px;
+        color: #fff;
+        &::placeholder {
+            color: rgb(179, 179, 179);
+            letter-spacing: 1px;
+        }
+    }
+    @media (max-width: 860px) {
+        input {
+            width: 220px;
+        }
+    }
+}
+
+.navLogo {
+    font-size: 22px;
+    color: #ff7f50;
+    font-weight: 900;
+    user-select: none;
+}
+
+.heroNavMenu {
+    padding-left: 80px;
+    @media (max-width: 860px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        min-height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px 50px;
+        width: 100%;
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: all 800ms ease-in-out;
+        &.hidden {
+            left: -600px;
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,186 @@
+
+.movies {
+    width: 100%;
+    .container {
+        &:nth-child(1) {
+            height: 68vh;
+            overflow-y: scroll;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+            .error {
+                font-size: 38px;
+                color: red;
+                height: 32px;
+            }
+        }
+        img {
+            width: 100%;
+            max-width: 240px;
+            height: 360px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .container {
+            img {
+                max-width: 100%;
+                height: 500px;
+            }
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 854px) {
+        .container {
+            img {
+                max-width: 40%;
+            }
+        }
+    }
+
+    @media (min-width: 855px) and (max-width: 1144px) {
+        .container {
+            img {
+                max-width: 31%;
+            }
+        }
+    }
+
+    @media (min-width: 1145px) and (max-width: 1365px) {
+        .container {
+            img {
+                max-width: 23.4%;
+            }
+        }
+    }
+}
+
+.moviesPagination {
+    width: 100%;
+    .container {
+        &:nth-child(1) {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button {
+                border: none;
+                outline: none;
+                background-color: #32de57;
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+                border-radius: 4px;
+                width: 160px;
+                padding: 10px 0;
+                cursor: pointer;
+                user-select: none;
+                margin: 0 10px;
+                transition: background 500ms ease-in-out;
+                &:hover {
+                    background-color: #259a3e;
+                }
+            }
+        }
+    }
+}
+
+.movieDetail {
+    margin-top: 36px;
+    margin-bottom: 10%;
+    .container {
+        color: #fff;
+        img {
+            width: 100%;
+            border-radius: 24px;
+        }
+        .title{
+            h1 {
+                margin-top: 24px;
+                font-size: 72px;
+            }
+            h2 {
+                margin-bottom: 16px;
+                font-style: italic;
+                color: #ffe4c4;
+                font-weight: normal;
+            }
+        }
+        .genre {
+            margin-bottom: 24px;
+            span {
+                padding: 4px 16px;
+                border-radius: 8px;
+                margin-right: 12px;
+                background: brown;
+            }
+        }
+        .vote-date {
+            margin-bottom: 32px;
+            span:first-child {
+                padding: 8px;
+                margin-right: 12px;
+                background-color: #228b22;
+                border-radius: 8px;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            span:last-child {
+                font-size: 18px;
+                color: #add8e6;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+            }
+        }
+        .divider {
+            width: 100%;
+            height: 2px;
+            background-color: #555;
+            border-radius: 5px;
+            margin: 24px auto;
+        }
+        .summary {
+            p {
+                font-size: 24px;
+            }
+        }
+    }
+    @media (max-width: 860px) {
+        margin-top: 16px;
+        margin-bottom: 5%;
+        .container {
+            .genre {
+                margin-bottom: 24px;
+                span {
+                    padding: 4px 12px;
+                    margin-right: 8px;
+                    font-size: 13px;
+                }
+            }
+            .vote-date {
+                margin-bottom: 32px;
+                span:first-child {
+                    padding: 8px;
+                    margin-right: 12px;
+                    font-size: 16px;
+                }
+                span:last-child {
+                    font-size: 16px;
+                    color: #add8e6;
+                    font-weight: 700;
+                    letter-spacing: 0;
+                }
+            }
+            .summary {
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
